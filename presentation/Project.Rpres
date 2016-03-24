@@ -1,0 +1,36 @@
+Motor Data Project
+========================================================
+author: Lalitha Sastry
+date: 24-Mar-2016
+
+Sysnopsis
+========================================================
+
+This project demos the skills of using Shiny tools with R language. I'm processing motor data to display GPLOT. The plot gets feed from the user w.r.t Cylinder and Gear values. THis is a peer assesement activity for "Session9 - Developing Data Products".
+
+### References:
+https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html
+http://shiny.rstudio.com/articles/shinyapps.html
+
+Project Links
+========================================================
+
+**GIT**: 
+**shinyapps.io**:
+
+
+Slide With Code
+========================================================
+
+```{r}
+summary(mtcars)
+```
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+#plot(mtcars)
+library(ggplot2)
+ggplot(mtcars, aes_string(x=mtcars$cyl, y=mtcars$gear)) + geom_point()
+```
