@@ -15,8 +15,9 @@ http://shiny.rstudio.com/articles/shinyapps.html
 Project Links
 ========================================================
 
-**GIT**: 
-**shinyapps.io**:
+**GIT**: https://github.com/lpisapati/ShinyCourseProject  
+**RPubs**: http://rpubs.com/plalithas/ShinyCourseProject  
+**shinyapps.io**: https://lalithasastryp.shinyapps.io/ShinyCourseProject/
 
 
 Slide With Code

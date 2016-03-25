@@ -7,7 +7,9 @@
 
 library(shiny)
 
-dataset <- mtcars
+
+#cyltypes <- sort(unique(values$cyl))
+#geartypes <- sort(unique(values$gear))
 
 shinyUI(fluidPage(
 
@@ -17,8 +19,10 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for number of bins
   sidebarLayout(
     sidebarPanel(
-      selectInput('cyl', 'Cylinders', cyltypes),
-      selectInput('gear', 'Gear', geartypes),
+      selectInput('cyl', 'Cylinders', c(4,6,8)),
+      selectInput('gear', 'Gear', c(3,4,5)),
+      #selectInput('cyl', 'Cylinders', cyltypes),
+      #selectInput('gear', 'Gear', geartypes),
       checkboxInput('jitter', 'Jitter'),
       checkboxInput('smooth', 'Smooth')
     ),
