@@ -1,0 +1,2 @@
+### Motor Car Project  
+This project demos the skills of using Shiny tools with R language. I'm processing motor data to display GPLOT. The plot gets feed from the user w.r.t Cylinder and Gear values. This is a peer assesement activity for "Session9 - Developing Data Products".
