@@ -24,17 +24,19 @@ shinyServer(function(input, output) {
   
   output$plot <- renderPlot({
     
+    ## generate GGplot based on the values selected from ui.R w.r.t Cylider and Gear values.
     p <- ggplot(values(), aes_string(x=input$cyl, y=input$gear)) + geom_point()
-    
-    #if (input$color != 'None')
-      p <- p + aes_string(color=input$cyl)
-    
+    ## set the colo output
+    p <- p + aes_string(color=input$cyl)
+    # define facets
     facets <- paste(input$cyl, '~', input$gear)
     if (facets != '. ~ .')
       p <- p + facet_grid(facets)
     
+    ## reset the ggplot with jitter value, if selected
     if (input$jitter)
       p <- p + geom_jitter()
+    ## reset the ggplot with smooth value, if selected
     if (input$smooth)
       p <- p + geom_smooth()
     
