@@ -61,57 +61,14 @@ img {
 
 
 
-<div id="motor-data-project" class="section level1">
-<h1>Motor Data Project</h1>
-<p>author: Lalitha Sastry date: 24-Mar-2016</p>
-</div>
-<div id="sysnopsis" class="section level1">
-<h1>Sysnopsis</h1>
-<p>This project demos the skills of using Shiny tools with R language. I’m processing motor data to display GPLOT. The plot gets feed from the user w.r.t Cylinder and Gear values. THis is a peer assesement activity for “Session9 - Developing Data Products”.</p>
-<div id="references" class="section level3">
-<h3>References:</h3>
-<p><a href="https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html" class="uri">https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html</a> <a href="http://shiny.rstudio.com/articles/shinyapps.html" class="uri">http://shiny.rstudio.com/articles/shinyapps.html</a></p>
-</div>
-</div>
-<div id="project-links" class="section level1">
-<h1>Project Links</h1>
-<p>In, Motor Trend, a magazine about the automobile industry, is interested to explore the data set “mtcars” to analyze the relationships/impact of regression on the variables in the data set. We are going to apply linear models, generalized linear models, binary models, residuals, predictions, hatvalues, t-test, interpreting odds ration and other regression models learned in this session. “mtcars” data set was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). The data frame has 32 observations and 11 variables. In this project we will explore the linear model between Cylinder and Gear values. Using GGPlot, I’m making a static plots on selecting the 2 values.</p>
-<p><strong>GIT</strong>: <a href="https://github.com/lpisapati/ShinyCourseProject" class="uri">https://github.com/lpisapati/ShinyCourseProject</a><br />
-<strong>RPubs</strong>: <a href="http://rpubs.com/plalithas/ShinyCourseProject" class="uri">http://rpubs.com/plalithas/ShinyCourseProject</a><br />
-<strong>shinyapps.io</strong>: <a href="https://lalithasastryp.shinyapps.io/ShinyCourseProject/" class="uri">https://lalithasastryp.shinyapps.io/ShinyCourseProject/</a></p>
-</div>
-<div id="what-you-can-do" class="section level1">
-<h1>What you can do?</h1>
-<p>App helps you to select the Cylinder and Gear values from MTCARS datasets. First choose the gear and cylinder from the given list. Later you can select the jitter/smooth conditional mean to be added to the plot</p>
-</div>
-<div id="slide-with-code" class="section level1">
-<h1>Slide With Code</h1>
-<pre class="{r}"><code>head(mtcars)</code></pre>
-<pre><code>      mpg             cyl             disp             hp       
- Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
- 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
- Median :19.20   Median :6.000   Median :196.3   Median :123.0  
- Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  
- 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  
- Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  
-      drat             wt             qsec             vs        
- Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  
- 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  
- Median :3.695   Median :3.325   Median :17.71   Median :0.0000  
- Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  
- 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  
- Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  
-       am              gear            carb      
- Min.   :0.0000   Min.   :3.000   Min.   :1.000  
- 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  
- Median :0.0000   Median :4.000   Median :2.000  
- Mean   :0.4062   Mean   :3.688   Mean   :2.812  
- 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
- Max.   :1.0000   Max.   :5.000   Max.   :8.000  </code></pre>
-</div>
-<div id="slide-with-plot" class="section level1">
-<h1>Slide With Plot</h1>
-<p><code>{r, echo=FALSE} data(&quot;mtcars&quot;) p &lt;- ggplot(mtcars, aes_string(x=cyl, y=gear)) + geom_point() p &lt;- p + aes_string(color=cyl) facets &lt;- paste(cyl, '~', gear) p &lt;- p + facet_grid(facets) p &lt;- p + geom_jitter() print(p)</code></p>
+<div id="motor-car-project" class="section level3">
+<h3>Motor Car Project</h3>
+<p>This project demos the skills of using Shiny tools with R language. I’m processing motor data to display GPLOT. The plot gets feed from the user w.r.t Cylinder and Gear values. This is a peer assesement activity for “Developing Data Products”.</p>
+<ul>
+<li><a href="https://github.com/lpisapati/ShinyCourseProject"> GIT Link </a></li>
+<li><a href="http://rpubs.com/plalithas/ShinyCourseProject"> RPubs </a></li>
+<li><a href="https://lalithasastryp.shinyapps.io/ShinyCourseProject"> ShinyApps </a></li>
+</ul>
 </div>
 
 

@@ -40,6 +40,9 @@ shinyServer(function(input, output) {
     if (input$smooth)
       p <- p + geom_smooth()
     
+    p <- p + xlab("Gear")
+    p <- p + ylab("Cylinder")
+    p <- p + labs(colour = "Cylinder")
     print(p)
     
   }, height=700)

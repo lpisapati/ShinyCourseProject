@@ -12,18 +12,27 @@ This project demos the skills of using Shiny tools with R language. I'm processi
 https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html
 http://shiny.rstudio.com/articles/shinyapps.html
 
-Project Links
+Introduction - Project Links
 ========================================================
 
+In, Motor Trend, a magazine about the automobile industry, is interested to explore the data set "mtcars" to analyze the relationships/impact of regression on the variables in the data set. We are going to apply linear models, generalized linear models, binary models, residuals, predictions, hatvalues, t-test, interpreting odds ration and other regression models learned in this session. "mtcars" data set was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). The data frame has 32 observations and 11 variables.
+In this project we will explore the linear model between Cylinder and Gear values. Using GGPlot, I'm making a static plots on selecting the 2 values.
+
 **GIT**: https://github.com/lpisapati/ShinyCourseProject  
+**RPubs**: http://rpubs.com/plalithas/ShinyCourseProject  
 **shinyapps.io**: https://lalithasastryp.shinyapps.io/ShinyCourseProject/
+
+What you can do?
+========================================================
+App helps you to select the Cylinder and Gear values from MTCARS datasets.
+First choose the gear and cylinder from the given list. Later you can select the jitter/smooth conditional mean to be added to the plot
 
 
 Slide With Code
 ========================================================
 
 ```{r}
-summary(mtcars)
+head(mtcars)
 ```
 
 Slide With Plot
@@ -32,5 +41,15 @@ Slide With Plot
 ```{r, echo=FALSE}
 #plot(mtcars)
 library(ggplot2)
-ggplot(mtcars, aes_string(x=mtcars$cyl, y=mtcars$gear)) + geom_point()
+data("mtcars")
+p <- ggplot(mtcars, aes_string(x=mtcars$cyl, y=mtcars$gear)) + geom_point()
+p <- p + aes_string(color=mtcars$cyl)
+facets <- paste(mtcars$cyl, '~', mtcars$gear)
+p <- p + facet_grid(facets)
+p <- p + geom_jitter()
+p <- p + xlab("Gear")
+p <- p + ylab("Cylinder")
+p <- p + labs(colour = "Cylinder")
+print(p)
+
 ```

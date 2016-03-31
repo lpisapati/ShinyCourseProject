@@ -25,6 +25,8 @@ shinyUI(fluidPage(
       #selectInput('gear', 'Gear', geartypes),
       checkboxInput('jitter', 'Jitter'),
       checkboxInput('smooth', 'Smooth')
+      #tags$a(href=".readme.md", "About")
+      #tags$iframe(seamless="About", src="readme.md")
     ),
 
     # Show a plot of the generated distribution
@@ -32,12 +34,4 @@ shinyUI(fluidPage(
       plotOutput("plot")
     )
   )
-  #,
-  
-  
-#  tabPanel("About",
-#           mainPanel(
-#             includeMarkdown("about.md")
-#           )
-#  )
 ))

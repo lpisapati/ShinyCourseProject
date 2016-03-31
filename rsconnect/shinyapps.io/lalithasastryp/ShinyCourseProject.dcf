@@ -2,6 +2,8 @@ name: ShinyCourseProject
 account: lalithasastryp
 server: shinyapps.io
 appId: 90364
-bundleId: 403122
+bundleId: 407434
 url: https://lalithasastryp.shinyapps.io/ShinyCourseProject/
-when: 1458918656.82011
+when: 1459436800.36817
+asMultiple: FALSE
+asStatic: FALSE
